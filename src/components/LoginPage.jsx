@@ -32,7 +32,6 @@ const LoginPage = () => {
                 "/api/auth/public/login",
                 data
             );
-            console.log(response.token);
             setToken(response.token);
             localStorage.setItem("JWT_TOKEN", JSON.stringify(response.token));
             toast.success("Login Successful!");
@@ -90,7 +89,7 @@ const LoginPage = () => {
             </button>
 
             <p className='text-center text-sm text-slate-700 mt-6'>
-                Don't have an account? 
+                Don't have an account?
                 <Link
                     className='font-semibold underline hover:text-black'
                     to="/register">

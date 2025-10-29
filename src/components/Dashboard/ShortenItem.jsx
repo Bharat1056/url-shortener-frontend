@@ -44,8 +44,7 @@ const ShortenItem = ({ originalUrl, shortUrl, clickCount, createdDate }) => {
                       });
             setAnalyticsData(data);
             setSelectedUrl("");
-            console.log(data);
-            
+
         } catch (error) {
             navigate("/error");
             console.log(error);
@@ -152,7 +151,7 @@ const ShortenItem = ({ originalUrl, shortUrl, clickCount, createdDate }) => {
                         <p className='text-slate-700'>Please Wait...</p>
                     </div>
                 </div>
-                ) : ( 
+                ) : (
                     <>{analyticsData.length === 0 && (
                         <div className="absolute flex flex-col  justify-center sm:items-center items-end  w-full left-0 top-0 bottom-0 right-0 m-auto">
                             <h1 className=" text-slate-800 font-serif sm:text-2xl text-[15px] font-bold mb-1">
